@@ -8,6 +8,11 @@ from flask_moment import Moment
 app = Flask(__name__)
 app.config.from_object(Config)
 
+
+db.init_app(app)
+migrate = Migrate(app, db)
+
+
 # Import and register bluprints later (auth, etc)
 
 from app.blueprints.main import main
