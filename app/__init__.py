@@ -16,10 +16,11 @@ migrate = Migrate(app, db)
 # Import and register bluprints later (auth, etc)
 
 from app.blueprints.main import main
+from app.blueprints.auth import auth
 
 
 app.register_blueprint(main)
-
+app.register_blueprint(auth)
 
 
 from app import routes

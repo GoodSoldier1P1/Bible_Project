@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../../../static/login.css">
+{% endblock %}
+
+{% block title %}Login{% endblock %}
+
+
+{% block content %}
+
+<form method="POST">
+
+    {{ form.hiddent_tag}}
+
+    <div>
+        <label for="email" class="form-label">Email: </label>
+        {{ form.email(class="form-input", id="emial", placeholder="Enter your Email...") }}
+    </div>
+    <div>
+        <label for="password" class="form-label">Password: </label>
+        {{ form.password(class="password form-input", id="password", placeholder="Enter your Password...") }}
+    </div>
+    {{ form.submit_btn(class="submitBtn") }}
+</form>
+
+
+{% endblock %}
