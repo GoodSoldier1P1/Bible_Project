@@ -30,7 +30,7 @@ def bibleSearch():
             print("Did Not Find verse in database, calling API")
             url = f'https://bible-api.com/{str(search)}'
             response = requests.get(url)
-            data = response.json
+            data = response.json()
 
             try:
                 bible_dict = {

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../../../static/home.css">
+{% endblock %}
+
+{% block title %}Soldier's Bible App{% endblock %}
+
+{% block content %}
+
+<div class="randomContainer">
+    
+    <div class="navbar">
+        <nav class="nav nav-pills flex-column flex-sm-row">
+            <a class="flex-sm-fill text-sm-center nav-link active authLinks" aria-current="page" href="{{ url_for('auth.login') }}">Login</a>
+            <a class="flex-sm-fill text-sm-center nav-link authLinks" href="{{ url_for('auth.signup') }}">Signup</a>
+          </nav>
+    </div>
+
+    <div class="verse">
+
+        <div>
+            <h1>"{{ randomVerseText }}"</h1>
+            <h3>{{RandomBook}} {{RandomChapter}}:{{randomVerse}}</h3>
+        </div>
+    </div>
+
+    <div class="wspace1"></div>
+
+    <div class="wspace2"></div>
+
+    <div class="footer">
+        <p class="Copy">
+            &copy; GoodSoldier1P1_7, 2023 | Verse Credit: <a href="https://bible-api.com" target="_blank">https://bible-api.com</a>
+        </p>
+    </div>
+
+</div>
+
+{% endblock %}

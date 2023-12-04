@@ -10,9 +10,14 @@ body{
     
 }
 
-.login {  display: grid;
-  grid-template-columns: 0.8fr 1.4fr 0.8fr;
-  grid-template-rows: 1.3fr 1.5fr 0.2fr;
+h1, h3{
+    text-align: center;
+    margin-top: 3vh;
+}
+
+.randomContainer {  display: grid;
+  grid-template-columns: 0.4fr 2.3fr 0.3fr;
+  grid-template-rows: 0.2fr 2.6fr 0.2fr;
   grid-auto-columns: 1fr;
   grid-auto-rows: 1fr;
   gap: 0em 0em;
@@ -20,30 +25,25 @@ body{
   align-items: stretch;
   grid-template-areas:
     "navbar navbar navbar"
-    "wspace1 form wspace2"
+    "wspace1 verse wspace2"
     "wspace1 footer wspace2";
 }
 
 .navbar { grid-area: navbar; }
 
+.verse { grid-area: verse; }
+
 .wspace1 { grid-area: wspace1; }
 
 .wspace2 { grid-area: wspace2; }
 
-.footer { grid-area: footer; }
-
-.form { 
-    grid-area: form;
- }
-
-.form-input{
-    border: 1px solid black;
-    margin-bottom: 5%;
-    margin-left: 2%;
+.footer { 
+    grid-area: footer; 
+    justify-self: flex-end;
+    align-items: center;
+    margin-top: 20vh;
 }
-
-.submitBtn{
-    border: 1px solid black;
-    border-radius: 15%;
-    padding: 1%;
+  
+.authLinks{
+    margin-left: 5px;
 }

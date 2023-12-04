@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: #7F7FD5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.signup {  display: grid;
+    grid-template-columns: 0.2fr 2.6fr 0.2fr;
+    grid-template-rows: 0.4fr 2fr 0.6fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0em 0em;
+    grid-auto-flow: row;
+    align-items: stretch;
+    grid-template-areas:
+      "navbar navbar navbar"
+      "wspace1 form wspace2"
+      "wspace1 footer wspace2";
+  }
+  
+  .navbar { grid-area: navbar; }
+  
+  .wspace1 { grid-area: wspace1; }
+  
+  .wspace2 { grid-area: wspace2; }
+  
+  .footer { grid-area: footer; }
+  
+  .form { grid-area: form; }
+  
+
+.form-label{
+    margin: 15px;
+    padding: 15px;
+    text-shadow: 1px 1px 1px black;
+
+}
+
+.form-input{
+    border: 1px solid black;
+    padding: 5px;
+    margin-left: 5%;
+    text-shadow: 1px 0px 1px black;
+
+}
+
+.signupBtn{
+    margin-top: 3vh;
+    border: 1px solid black;
+    border-radius: 15%;
+    text-shadow: 1px 0px 1px black;
+
+}
+
+.signup{
+    border: 1px solid black;
+    text-align: center;
+}

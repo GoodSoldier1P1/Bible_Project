@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block styles %}
+<link rel="stylesheet" href="../../../static/signup.css">
+{% endblock %}
+
+{% block title %} Signup {% endblock %}
+
+{% block content %}
+
+<div class="signup">
+    <div class="navbar"></div>
+
+    <div class="wspace1"></div>
+
+    <div class="wspace2"></div>
+
+    <div class="footer"></div>
+
+    <div class="form">
+        <form method="POST" class="signup">
+
+            {{ form.hidden_tag() }}
+
+            <div>
+                <label for="fname" class="form-label">First Name</label>
+                {{ form.first_name(class="form-input cus-input", id="fname", placeholder="Enter your First Name...") }}
+            </div>
+            <div>
+                <label for="lname" class="form-label">Last Name</label>
+                {{ form.last_name(class="form-input cus-input", id="lname", placeholder="Enter your Last Name...") }}
+            </div>
+            <div>
+                <label for="email" class="form-label">Email</label>
+                {{ form.email(class="form-input cus-input", id="email", placeholder="Enter your Email...") }}
+            </div>
+            <div>
+                <label for="password" class="form-label">Password</label>
+                {{ form.password(class="password form-input cus-input", id="password", placeholder="Enter your Password...") }}
+            </div>
+            <div>
+                <label for="cpassword" class="form-label">Comfirm Password</label>
+                {{ form.Comfirm_Password(class="password form-input cus-input", id="cpassword", placeholder="Comfirm your Password...") }}
+                <div>
+                {{ form.submit_btn(class="signupBtn") }}
+                </div>
+            </div>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -9,20 +9,36 @@
 
 {% block content %}
 
-<form method="POST">
 
-    {{ form.hiddent_tag}}
 
-    <div>
-        <label for="email" class="form-label">Email: </label>
-        {{ form.email(class="form-input", id="emial", placeholder="Enter your Email...") }}
+
+<div class="login">
+    <div class="navbar"></div>
+
+    <div class="wspace1"></div>
+
+    <div class="wspace2"></div>
+
+    <div class="footer"></div>
+
+    <div class="form">
+        <form method="POST">
+
+            {{ form.hidden_tag() }}
+
+            <div>
+                <label for="email" class="form-label">Email: </label>
+                {{ form.email(class="form-input", id="emial", placeholder="Enter your Email...") }}
+            </div>
+            <div>
+                <label for="password" class="form-label">Password: </label>
+                {{ form.password(class="password form-input", id="password", placeholder="Enter your Password...") }}
+            </div>
+            {{ form.submit_btn(class="submitBtn") }}
+        </form>
     </div>
-    <div>
-        <label for="password" class="form-label">Password: </label>
-        {{ form.password(class="password form-input", id="password", placeholder="Enter your Password...") }}
-    </div>
-    {{ form.submit_btn(class="submitBtn") }}
-</form>
+
+</div>
 
 
 {% endblock %}
