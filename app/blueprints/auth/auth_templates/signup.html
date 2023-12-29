@@ -18,32 +18,34 @@
     <div class="footer"></div>
 
     <div class="form">
-        <form method="POST" class="signup">
+        <form method="POST">
 
             {{ form.hidden_tag() }}
 
-            <div>
-                <label for="fname" class="form-label">First Name</label>
-                {{ form.first_name(class="form-input cus-input", id="fname", placeholder="Enter your First Name...") }}
+            <div class="form-floating mb-3 w-25 mx-auto">
+                {{ form.first_name(class="form-control", id="floatingInput") }}
+                <label for="floatingInput">First Name</label>
             </div>
-            <div>
-                <label for="lname" class="form-label">Last Name</label>
-                {{ form.last_name(class="form-input cus-input", id="lname", placeholder="Enter your Last Name...") }}
+
+            <div class="form-floating mb-3 w-25 mx-auto">
+                {{ form.last_name(class="form-control", id="floatingInput") }}
+                <label for="floatingInput">Last Name</label>
             </div>
-            <div>
-                <label for="email" class="form-label">Email</label>
-                {{ form.email(class="form-input cus-input", id="email", placeholder="Enter your Email...") }}
+
+            <div class="form-floating mb-3 w-25 mx-auto">
+                {{ form.email(class="form-control", id="floatingInput") }}
+                <label for="floatingInput">Email address</label>
             </div>
-            <div>
-                <label for="password" class="form-label">Password</label>
-                {{ form.password(class="password form-input cus-input", id="password", placeholder="Enter your Password...") }}
+
+            <div class="form-floating w-25 mx-auto">
+                {{ form.password(class="form-control", id="floatingPassword") }}
+                <label for="floatingPassword">Password</label>
             </div>
-            <div>
-                <label for="cpassword" class="form-label">Comfirm Password</label>
-                {{ form.Comfirm_Password(class="password form-input cus-input", id="cpassword", placeholder="Comfirm your Password...") }}
-                <div>
-                {{ form.submit_btn(class="signupBtn") }}
-                </div>
+
+            <div class="form-floating w-25 mx-auto">
+                {{ form.Comfirm_Password(class="form-control", id="floatingPassword") }}
+                <label for="floatingPassword">Confirm Password</label>
+                {{ form.submit_btn(class="signupBtn btn btn-primary btn-lg") }}
             </div>
         </form>
     </div>

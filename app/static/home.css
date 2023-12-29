@@ -31,7 +31,10 @@ h1, h3{
 
 .navbar { grid-area: navbar; }
 
-.verse { grid-area: verse; }
+.verse { 
+    grid-area: verse; 
+    align-self: center;
+}
 
 .wspace1 { grid-area: wspace1; }
 
@@ -46,4 +49,20 @@ h1, h3{
   
 .authLinks{
     margin-left: 5px;
+}
+
+.logo {
+    height: 5vh;
+    margin: 5px 15px 0 15px;
+}
+
+.introVerse {
+    border: 1px solid black;
+    border-radius: 2%;
+    background-color: rgb(185, 229, 247);
+    padding: 15px;
+}
+
+#introText {
+    text-shadow: 1px 1px #1b1b1b;
 }

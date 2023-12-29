@@ -24,7 +24,10 @@ body{
     "wspace1 footer wspace2";
 }
 
-.navbar { grid-area: navbar; }
+.navbar { 
+    grid-area: navbar;
+    margin-top: 0;
+}
 
 .wspace1 { grid-area: wspace1; }
 
@@ -46,4 +49,10 @@ body{
     border: 1px solid black;
     border-radius: 15%;
     padding: 1%;
+    margin-top: 5%;
+}
+
+.logo {
+    height: 5vh;
+    margin: 5px 15px 0 15px;
 }

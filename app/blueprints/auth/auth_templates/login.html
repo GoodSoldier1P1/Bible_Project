@@ -26,16 +26,17 @@
 
             {{ form.hidden_tag() }}
 
-            <div>
-                <label for="email" class="form-label">Email: </label>
-                {{ form.email(class="form-input", id="emial", placeholder="Enter your Email...") }}
+            <div class="form-floating mb-3">
+                {{ form.email(class="form-control", id="floatingInput", placeholder="Enter your Email...") }}
+                <label for="floatingInput">Email address</label>
             </div>
-            <div>
-                <label for="password" class="form-label">Password: </label>
-                {{ form.password(class="password form-input", id="password", placeholder="Enter your Password...") }}
+            <div class="form-floating">
+                {{ form.password(class="form-control", id="floatingPassword", placeholder="Enter your Password...") }}
+                <label for="floatingPassword">Password</label>
             </div>
-            {{ form.submit_btn(class="submitBtn") }}
+            {{ form.submit_btn(class="submitBtn btn btn-primary btn-lg") }}
         </form>
+        <p>Don't have an account? <a href="{{ url_for('auth.signup') }}">Signup</a></p>
     </div>
 
 </div>

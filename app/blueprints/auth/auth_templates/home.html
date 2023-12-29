@@ -12,6 +12,7 @@
     
     <div class="navbar">
         <nav class="nav nav-pills flex-column flex-sm-row">
+            <a href="https://www.twitch.tv/goodsoldier1p1_7" target="_blank"><img src="../../../static/images/Emanuel.jpg" class="logo" alt=""></a>
             <a class="flex-sm-fill text-sm-center nav-link active authLinks" aria-current="page" href="{{ url_for('auth.login') }}">Login</a>
             <a class="flex-sm-fill text-sm-center nav-link authLinks" href="{{ url_for('auth.signup') }}">Signup</a>
           </nav>
@@ -19,8 +20,8 @@
 
     <div class="verse">
 
-        <div>
-            <h1>"{{ randomVerseText }}"</h1>
+        <div class="introVerse">
+            <h1 id="introText">"{{ randomVerseText }}"</h1>
             <h3>{{RandomBook}} {{RandomChapter}}:{{randomVerse}}</h3>
         </div>
     </div>
