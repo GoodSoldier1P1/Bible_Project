@@ -19,11 +19,13 @@ def home():
     randomVerse = RandomVerseData['verses'][0]['verse']
     RandomChapter = RandomVerseData['verses'][0]['chapter']
     RandomBook = RandomVerseData['verses'][0]['book_name']
+    reference = RandomVerseData['reference']
 
     return jsonify( randomVerse=randomVerse,
                     randomVerseText=randomVerseText,
                     RandomChapter=RandomChapter,
-                    RandomBook=RandomBook,)
+                    RandomBook=RandomBook,
+                    reference=reference,)
 
 @auth.route('/login', methods=['GET', 'POST'])
 def login():

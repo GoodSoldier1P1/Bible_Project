@@ -20,10 +20,11 @@ def bibleSearch():
         data = response.json()
 
         try:
-            text = data['verses'][0]['text']
+            text = data['text']
             verse = data['verses'][0]['verse']
             chapter = data['verses'][0]['chapter']
             book = data['verses'][0]['book_name']
+            reference = data['reference']
 
 
             # db.session.add(new_verse)
@@ -31,7 +32,8 @@ def bibleSearch():
             return jsonify( verse=verse,
                         text=text,
                         chapter=chapter,
-                        book=book,)
+                        book=book,
+                        reference=reference)
         except IndexError:
             return redirect('/bug')
 
